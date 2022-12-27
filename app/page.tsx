@@ -1,7 +1,7 @@
 // import Image from "next/image";
 import styles from "./page.module.scss";
 import Image from "next/image";
-import LockImage from "../public/Logo/lock.png";
+import LockImage from "../public/Logo/logo-lock-simple.png";
 // import styless from "./page.module.scss";
 
 export default function Home() {
