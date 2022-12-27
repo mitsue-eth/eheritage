@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#__next {
+  height: 100%;
+}
+
+#__next {
+  isolation: isolate;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  color: var(--color-text);
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  /* background: var(--color-background-lock); */
+}
+
+html {
+  overflow: hidden;
+}
+
+/* html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+} */
+
+/*todo: all unused root css variables to be deleted */
+
+:root {
+  --font-weight-bold: 600;
+  --font-weight-medium: 500;
+  --font-weight-light: 400;
+  --font-family: "Wotfard", Futura, -apple-system, sans-serif;
+  --font-family-mono: "Source Code Pro", "Fira Mono", monospace;
+  --font-family-spicy: "Sriracha", cursive;
+  --font-family-calligraphic: "Great Vibes", cursive;
+  --color-text: hsl(210deg 10% 90%);
+  --color-background-lock: #26292f;
+  --color-background: hsl(210deg 15% 6%);
+  --color-blurred-background: hsla(210deg 15% 6% / 0.75);
+  --color-primary: hsl(333deg 100% 50%);
+  --color-secondary: hsl(185deg 100% 55%);
+  --color-tertiary: hsl(53deg 100% 50%);
+  --color-decorative: hsl(200deg 50% 60%);
+  --color-muted: hsl(210deg 38% 15%);
+  --color-info: hsl(245deg 100% 60%);
+  --color-error: hsl(340deg 95% 60%);
+  --color-error-background: hsla(340deg 95% 43% / 0.1);
+  --color-success: hsl(160deg 100% 40%);
+  --color-success-background: hsla(160deg 100% 40% / 0.1);
+  --color-warning: hsl(30deg 100% 50%);
+  --color-warning-background: hsla(38deg 100% 50% / 0.1);
+  --color-gray-50: hsl(210deg 19% 10%);
+  --color-gray-100: hsl(210deg 15% 20%);
+  --color-gray-200: hsl(210deg 15% 25%);
+  --color-gray-300: hsl(210deg 10% 40%);
+  --color-gray-400: hsl(210deg 9% 45%);
+  --color-gray-500: hsl(210deg 8% 50%);
+  --color-gray-600: hsl(210deg 12% 55%);
+  --color-gray-700: hsl(210deg 14% 66%);
+  --color-gray-800: hsl(210deg 20% 77%);
+  --color-gray-900: hsl(210deg 25% 88%);
+  --color-gray-1000: hsl(210deg 25% 96%);
+  --syntax-bg: hsl(225deg, 15%, 92%);
+  --syntax-highlight: hsl(225deg, 25%, 93%);
+  --syntax-txt: #2a2a2a;
+  --syntax-comment: hsl(225deg, 15%, 42%);
+  --syntax-prop: #da0079;
+  --syntax-bool: #bf00b8;
+  --syntax-val: hsl(200deg, 15%, 40%);
+  --syntax-str: #651fff;
+  --syntax-name: #aa00ff;
+  --syntax-del: rgb(255, 85, 85);
+  --syntax-regex: #3600d6;
+  --syntax-fn: #3d5afe;
+  --shadow-color: 210deg 15% 6%;
+  --shadow-elevation-low: 0px 0.2px 0.3px hsl(var(--shadow-color) / 0.06),
+    0px 0.5px 0.7px -0.6px hsl(var(--shadow-color) / 0.11),
+    0px 1.1px 1.4px -1.2px hsl(var(--shadow-color) / 0.15);
+  --shadow-elevation-medium: 0px 0.2px 0.3px hsl(var(--shadow-color) / 0.07),
+    0px 1.1px 1.4px -0.4px hsl(var(--shadow-color) / 0.1),
+    0px 2.4px 3.1px -0.8px hsl(var(--shadow-color) / 0.14),
+    0.1px 5.4px 7.1px -1.2px hsl(var(--shadow-color) / 0.17);
+  --shadow-elevation-high: 0px 0.2px 0.3px hsl(var(--shadow-color) / 0.06),
+    0px 2.3px 3px -0.2px hsl(var(--shadow-color) / 0.08),
+    0.1px 4.3px 5.6px -0.4px hsl(var(--shadow-color) / 0.09),
+    0.1px 6.6px 8.7px -0.5px hsl(var(--shadow-color) / 0.11),
+    0.1px 9.8px 12.9px -0.7px hsl(var(--shadow-color) / 0.13),
+    0.2px 14.3px 18.8px -0.9px hsl(var(--shadow-color) / 0.14),
+    0.3px 20.8px 27.3px -1.1px hsl(var(--shadow-color) / 0.16),
+    0.4px 29.6px 38.9px -1.2px hsl(var(--shadow-color) / 0.17);
+  --filter-elevation-low: drop-shadow(
+      0px 0.2px 0.3px hsl(var(--shadow-color) / 0.06)
+    )
+    drop-shadow(0px 0.5px 0.7px hsl(var(--shadow-color) / 0.11))
+    drop-shadow(0px 1.1px 1.4px hsl(var(--shadow-color) / 0.15));
+  --filter-elevation-medium: drop-shadow(
+      0px 0.2px 0.3px hsl(var(--shadow-color) / 0.07)
+    )
+    drop-shadow(0px 1.1px 1.4px hsl(var(--shadow-color) / 0.1))
+    drop-shadow(0px 2.4px 3.1px hsl(var(--shadow-color) / 0.14))
+    drop-shadow(0.1px 5.4px 7.1px hsl(var(--shadow-color) / 0.17));
+  --filter-elevation-high: drop-shadow(
+      0px 0.2px 0.3px hsl(var(--shadow-color) / 0.06)
+    )
+    drop-shadow(0px 2.3px 3px hsl(var(--shadow-color) / 0.08))
+    drop-shadow(0.1px 4.3px 5.6px hsl(var(--shadow-color) / 0.09))
+    drop-shadow(0.1px 6.6px 8.7px hsl(var(--shadow-color) / 0.11))
+    drop-shadow(0.1px 9.8px 12.9px hsl(var(--shadow-color) / 0.13))
+    drop-shadow(0.2px 14.3px 18.8px hsl(var(--shadow-color) / 0.14))
+    drop-shadow(0.3px 20.8px 27.3px hsl(var(--shadow-color) / 0.16))
+    drop-shadow(0.4px 29.6px 38.9px hsl(var(--shadow-color) / 0.17));
+  --gradient-golden: linear-gradient(-230deg, #ffde00, #ff8a00);
+}
