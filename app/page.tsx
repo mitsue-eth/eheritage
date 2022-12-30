@@ -1,7 +1,7 @@
 // import Image from "next/image";
 import styles from "./page.module.scss";
 import Image from "next/image";
-import LockImage from "../public/Logo/logo-lock.svg";
+import LockImage from "../public/Logo/logo-time-clock.svg";
 // import styless from "./page.module.scss";
 
 export default function Home() {
@@ -12,11 +12,11 @@ export default function Home() {
         <Image
           src={LockImage}
           alt="eHeritage Logo"
-          className="hover:cursor-pointer hover:saturate-200 relative"
+          className="hover:cursor-pointer hover:saturate-200 relative max-w-xs"
         />
-        <span className="text-2xl mt-1 hover:text-indigo-500 hover:cursor-pointer">
+        {/* <span className="text-2xl mt-1 hover:text-indigo-500 hover:cursor-pointer">
           eHeritage
-        </span>
+        </span> */}
       </main>
       <footer className={styles.footer}></footer>
     </div>
