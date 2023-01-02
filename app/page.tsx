@@ -1,5 +1,6 @@
 // import Image from "next/image";
 import styles from "./page.module.scss";
+import Lock from "../components/Logo/lock";
 import Image from "next/image";
 import LockImage from "../public/Logo/logo-time-clock.svg";
 // import styless from "./page.module.scss";
@@ -9,11 +10,9 @@ export default function Home() {
     <div className={styles.container}>
       <div className={styles.stars}></div>
       <main className={styles.main}>
-        <Image
-          src={LockImage}
-          alt="eHeritage Logo"
-          className="hover:cursor-pointer hover:saturate-200 relative max-w-xs"
-        />
+        <div className="max-w-xs w-60">
+          <Lock />
+        </div>
         {/* <span className="text-2xl mt-1 hover:text-indigo-500 hover:cursor-pointer">
           eHeritage
         </span> */}
