@@ -1,10 +1,6 @@
-// import Image from "next/image";
 import styles from "./page.module.scss";
 import Lock from "../components/Logo/lock";
 import Stars from "../components/Stars/stars";
-import Image from "next/image";
-import LockImage from "../public/Logo/logo-time-clock.svg";
-// import styless from "./page.module.scss";
 
 export default function Home() {
   return (

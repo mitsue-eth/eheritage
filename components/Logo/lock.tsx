@@ -1,12 +1,21 @@
+// use client;
+
 import styles from "./lock.module.scss";
+import { motion } from "framer-motion";
 
 export default function Lock() {
   return (
-    <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 401 401">
-      <path
+    <motion.svg
+      id="logo"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 401 401"
+    >
+      <motion.path
         id="lock-frame"
         className={styles.lockFrame}
         d="m347.5,169.34v142.32c0,28.51-23.33,51.84-51.84,51.84H105.34c-28.51,0-51.84-23.33-51.84-51.84v-142.32c0-26.45,20.08-48.44,45.74-51.47,2-.25,4.04-.37,6.1-.37h190.32c2.06,0,4.1.12,6.1.37,25.66,3.03,45.74,25.02,45.74,51.47Z"
+        initial={{ pathLength: 0 }}
+        animate={{ pathLength: 1 }}
       />
       <g id="polygon">
         <polygon
@@ -68,6 +77,6 @@ export default function Lock() {
           d="m292.174,327.425c.05,6.451,3.3,10.451,8.101,10.451,4.7,0,6.3-2.65,7.2-4.7h2.55c-1.05,3.3-3.7,7.05-9.851,7.05-7.6,0-10.55-6.55-10.55-12.9,0-7.15,3.55-13.301,10.851-13.301,7.7,0,10.15,6.65,10.15,11.351,0,.7,0,1.4-.05,2.05h-18.401Zm15.851-2.2c-.05-4.95-2.75-8.85-7.65-8.85-5.15,0-7.5,3.6-8.05,8.85h15.7Z"
         />
       </g>
-    </svg>
+    </motion.svg>
   );
 }

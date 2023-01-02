@@ -1,4 +1,4 @@
-import "./globals.css";
+import "../styles/globals.css";
 import { Orbitron } from "@next/font/google";
 
 const orbitron = Orbitron({
