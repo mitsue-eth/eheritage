@@ -1,18 +1,19 @@
+$sandColor: #6fa7ec;
+$lockColor: #fff;
+$textColor: rgb(210, 208, 208);
+
 .text {
-  fill: rgb(210, 208, 208);
-  stroke: #fff;
+  fill: $textColor;
+  stroke: $lockColor;
 }
-.textAccent {
-  fill: rgb(74, 119, 241);
-  stroke: rgb(143, 150, 240);
-}
+
 .duga {
-  stroke: #fff;
-  fill: #fff;
+  stroke: $lockColor;
+  fill: $lockColor;
 }
 
 .lockFrame {
-  stroke: #fff;
+  stroke: $lockColor;
   stroke-width: 3px;
 
   fill: transparent;
@@ -21,11 +22,19 @@
 .cls2 {
   stroke-width: 2px;
   fill: none;
-  stroke: #fff;
+  stroke: $lockColor;
   stroke-miterlimit: 10;
 }
 .polygons {
   fill: none;
-  stroke: #fff;
+  stroke: $lockColor;
   stroke-width: 2px;
+}
+
+.sandmass {
+  fill: $sandColor;
+}
+
+.sand {
+  stroke: $sandColor;
 }
