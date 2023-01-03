@@ -3,6 +3,24 @@
 import styles from "./lock.module.scss";
 import { motion } from "framer-motion";
 
+const delays = {
+  frame: 5,
+  duga: 5,
+  polygonSmallTop: 1,
+  polygonSmallBottom: 1,
+  polygonBig: 1,
+  letters: 3,
+  letter1: 12,
+  letter2: 2,
+  letter3: 2,
+  letter4: 2,
+  letter5: 2,
+  letter6: 2,
+  letter7: 2,
+  letter8: 2,
+  letter9: 2,
+};
+
 const textVariants = {
   start: {
     opacity: 0,
@@ -14,7 +32,7 @@ const textVariants = {
     opacity: 1,
     transition: {
       duration: 1,
-      delay: 2,
+      delay: delays.letters,
     },
   },
 };
@@ -34,8 +52,20 @@ export default function Lock() {
         animate={{ opacity: 1 }}
         transition={{
           duration: 1,
+          delay: delays.frame,
           ease: "easeInOut",
         }}
+      />
+      <motion.path
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          delay: delays.duga,
+          duration: 2,
+        }}
+        id='duga-closed'
+        className={styles.duga}
+        d='m301.76,117.87c-2-.25-4.04-.37-6.1-.37h-3.16c-20.94-44.18-53-72.99-92-72.99s-70.06,28.81-91,72.99h-4.16c-2.06,0-4.1.12-6.1.37,21.45-49.87,58.79-82.87,101.26-82.87s79.81,33,101.26,82.87Z'
       />
       <motion.g id='polygon'>
         <motion.polygon
@@ -43,18 +73,18 @@ export default function Lock() {
           animate={{ pathLength: 1 }}
           transition={{
             duration: 2,
-            delay: 2,
+            delay: delays.polygonSmallTop,
           }}
-          id='polygon-big'
+          id='polygon-small-top'
           className={styles.polygons}
-          points='237.825 244.149 237.825 201.05 200.5 179.5 163.175 201.05 163.175 244.149 200.5 265.699 237.825 244.149'
+          points='219.087 211.722 219.087 190.26 200.5 179.529 181.913 190.26 181.913 211.722 200.5 222.453 219.087 211.722'
         />
         <motion.polygon
           initial={{ pathLength: 0 }}
           animate={{ pathLength: 1 }}
           transition={{
             duration: 2,
-            delay: 3,
+            delay: delays.polygonSmallBottom,
           }}
           id='polygon-small-bottom'
           className={styles.polygons}
@@ -65,24 +95,14 @@ export default function Lock() {
           animate={{ pathLength: 1 }}
           transition={{
             duration: 2,
-            delay: 3,
+            delay: delays.polygonBig,
           }}
-          id='polygon-small-top'
+          id='polygon-big'
           className={styles.polygons}
-          points='219.087 211.722 219.087 190.26 200.5 179.529 181.913 190.26 181.913 211.722 200.5 222.453 219.087 211.722'
+          points='237.825 244.149 237.825 201.05 200.5 179.5 163.175 201.05 163.175 244.149 200.5 265.699 237.825 244.149'
         />
       </motion.g>
-      <motion.path
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{
-          delay: 3,
-          duration: 2,
-        }}
-        id='duga-closed'
-        className={styles.duga}
-        d='m301.76,117.87c-2-.25-4.04-.37-6.1-.37h-3.16c-20.94-44.18-53-72.99-92-72.99s-70.06,28.81-91,72.99h-4.16c-2.06,0-4.1.12-6.1.37,21.45-49.87,58.79-82.87,101.26-82.87s79.81,33,101.26,82.87Z'
-      />
+
       <motion.g id='text'>
         <motion.path
           variants={textVariants}
