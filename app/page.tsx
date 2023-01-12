@@ -6,11 +6,12 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Stars />
+      <header>This it Header</header>
       <main className={styles.main}>
-        <div className="max-w-xs w-60">
+        <div className='max-w-xs w-60'>
           <Lock />
         </div>
-        {/* <span className="text-2xl mt-1 hover:text-indigo-500 hover:cursor-pointer">
+        {/* <span className="mt-1 text-2xl hover:text-indigo-500 hover:cursor-pointer">
           eHeritage
         </span> */}
       </main>

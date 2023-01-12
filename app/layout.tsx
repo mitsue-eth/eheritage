@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import { Orbitron } from "@next/font/google";
+import { inDevEnvironment } from "../utils/devmode";
 
 const orbitron = Orbitron({
   weight: "400",
@@ -13,9 +14,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={orbitron.className}>
+    <html lang='en' className={orbitron.className}>
       <head />
-      <body>{children}</body>
+      {/* TODO: delete debug screens in production */}
+      <body className={inDevEnvironment ? "debug-screens" : ""}>
+        {children}
+      </body>
     </html>
   );
 }
