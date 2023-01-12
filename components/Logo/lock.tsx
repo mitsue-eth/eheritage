@@ -4,13 +4,13 @@ import styles from "./lock.module.scss";
 import { motion } from "framer-motion";
 
 const delays = {
-  frame: 6,
-  duga: 6,
-  polygonSmallTop: 1,
-  polygonSmallBottom: 1,
-  polygonBig: 3,
-  letters: 4,
-  sand: 3,
+  frame: 4,
+  duga: 4,
+  polygonSmallTop: 0,
+  polygonSmallBottom: 0,
+  polygonBig: 2,
+  letters: 3,
+  sand: 2,
 };
 
 const textVariants = {

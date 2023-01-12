@@ -4,10 +4,12 @@ import Stars from "../components/Stars/stars";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className='relative z-0 flex flex-col items-center min-h-full'>
       <Stars />
-      <header>This it Header</header>
-      <main className={styles.main}>
+      <header className='flex min-h-[80px] items-center justify-center'>
+        This it Header
+      </header>
+      <main className='flex flex-col items-center justify-center flex-1'>
         <div className='max-w-xs w-60'>
           <Lock />
         </div>
@@ -15,7 +17,9 @@ export default function Home() {
           eHeritage
         </span> */}
       </main>
-      <footer className={styles.footer}></footer>
+      <footer className='flex min-h-[80px] items-center justify-center'>
+        This is Footer
+      </footer>
     </div>
   );
 }
