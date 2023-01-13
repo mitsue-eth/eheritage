@@ -1,0 +1,30 @@
+$sandColor: #fff;
+
+.cls1,
+.cls2,
+.cls3 {
+  fill: none;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+}
+
+.cls1,
+.cls3 {
+  stroke-width: 12px;
+}
+
+.cls2 {
+  stroke-width: 15px;
+}
+
+.cls4 {
+  fill: $sandColor;
+}
+
+.cls3 {
+  stroke-dasharray: 0 0 12.22 12.22;
+}
+
+.cls6 {
+  fill: $sandColor;
+}
