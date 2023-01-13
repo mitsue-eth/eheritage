@@ -110,8 +110,8 @@ video {
 
 body {
   color: var(--color-text);
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  /* background: var(--color-background-lock); */
+  /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
+  background: var(--color-background-sl);
 }
 
 /*todo: all unused root css variables to be deleted */
@@ -125,6 +125,7 @@ body {
   --font-family-spicy: "Sriracha", cursive;
   --font-family-calligraphic: "Great Vibes", cursive;
   --color-text: hsl(210deg 10% 90%);
+  --color-background-sl: #17181d;
   --color-background-lock: #26292f;
   --color-background: hsl(210deg 15% 6%);
   --color-blurred-background: hsla(210deg 15% 6% / 0.75);
