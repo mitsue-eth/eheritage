@@ -12,6 +12,10 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-orbitron)"],
       },
+      backgroundImage: {
+        "divider-pattern":
+          "linear-gradient(90deg,rgba(71,71,65,0),#474741 50%,rgba(71,71,65,0))",
+      },
     },
   },
   plugins: [require("tailwindcss-debug-screens")],

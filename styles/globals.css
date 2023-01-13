@@ -114,10 +114,6 @@ body {
   /* background: var(--color-background-lock); */
 }
 
-html {
-  overflow: hidden;
-}
-
 /*todo: all unused root css variables to be deleted */
 
 :root {

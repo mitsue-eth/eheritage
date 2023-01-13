@@ -1,21 +1,26 @@
-import styles from "./page.module.scss";
-import Lock from "../components/Logo/lock";
-import Stars from "../components/Stars/stars";
+// import styles from "./page.module.scss";
+import Divider from "../components/Divider";
+import Lock from "../components/Logo";
+import Stars from "../components/Stars";
 
 export default function Home() {
   return (
-    <div className='relative z-0 flex flex-col items-center min-h-full'>
+    <div className='relative z-0 flex flex-col items-center min-h-full px-6'>
       <Stars />
-      <header className='flex min-h-[80px] items-center justify-center'>
+      <nav className='flex items-center justify-center py-5'>
         This it Header
-      </header>
+      </nav>
       <main className='flex flex-col items-center justify-center flex-1'>
-        <div className='max-w-xs w-60'>
+        {/* <div className='max-w-xs w-60'>
           <Lock />
-        </div>
-        {/* <span className="mt-1 text-2xl hover:text-indigo-500 hover:cursor-pointer">
-          eHeritage
-        </span> */}
+        </div> */}
+        <section className='py-80 sm:py-10'>Section 1</section>
+        <section className='py-80 sm:py-10'>
+          <Divider />
+          Section 2
+          <Divider />
+        </section>
+        <section className='py-80 sm:py-10'>Section 3</section>
       </main>
       <footer className='flex min-h-[80px] items-center justify-center'>
         This is Footer
